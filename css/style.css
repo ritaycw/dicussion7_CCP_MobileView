@@ -1,0 +1,19 @@
+body {
+    background-color: antiquewhite;
+    font-size: 18px;
+    line-height: 1.15;
+    margin: 10px;
+    padding: 10px;
+}
+
+header a, nav a {
+    text-decoration: none;
+}
+
+
+header a:hover, nav a:focus {
+    text-decoration: underline;
+    background-color: lightblue;
+}
+
+
