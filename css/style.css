@@ -1,19 +1,124 @@
 body {
-    background-color: antiquewhite;
-    font-size: 18px;
-    line-height: 1.15;
+    background-color: #ADD8E6;
+    font-size: 15px;
+    line-height: 1.5;
     margin: 10px;
     padding: 10px;
+    font-family: 'Merriweather', 'Anton', 'Times New Roman', 'Arial';
 }
 
 header a, nav a {
     text-decoration: none;
 }
 
+nav ul{
+    display: flex;
+    justify-content: space-around;
+
+}
+
+nav ul li{
+    padding: 5px;
+    font-size: 20px;
+    background-color: antiquewhite;
+    /* border: 5px solid #DEB887; */
+    border-radius: 10px;
+}
+
+h1{
+    font-size: 50px;
+    font-weight: bolder;
+    text-align: center;
+}
+
+h2{
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    /* background-color: #B0C4DE; */
+}
+
+h3 {
+    font-size: 20px;
+}
+
+h1, h2, h3, p, P, h2 span {
+    margin: 10px 0 10px 0;
+}
+
+figure img, figure, figcaption{
+    margin: 20px 0 20px 0;
+}
+
+/* h3 ul li{
+    text-align: center;
+} */
+
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background-color: darkblue;
+    color: white;
+    padding: 5px;
+    text-decoration: none;
+    z-index: 1000;
+}
+
+
+.skip-link:focus {
+    top: 0;
+}
+
 
 header a:hover, nav a:focus {
     text-decoration: underline;
     background-color: lightblue;
+}
+
+.grid{
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    align-content: center;
+    justify-content: space-around;
+}
+
+.grid-travel{
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    align-content: center;
+    justify-content: space-around;
+}
+
+.grid div, .grid-travel div{
+    border: 5px solid black;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: azure;
+}
+
+.grid img, .grid-travel img{
+    width: 70%;
+    display: block;
+    margin: 0 auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .gif {
+      display: none; /* Hide GIFs */
+    }
+}
+
+.active{
+    border-right: 2px solid #333;
+    border-bottom: 2px solid #333;
+    background-color: #F5DEB3;
 }
 
 
