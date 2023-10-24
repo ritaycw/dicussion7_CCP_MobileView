@@ -11,6 +11,15 @@ body {
     font-family: 'Merriweather', 'Anton', 'Times New Roman', 'Arial';
 }
 
+.travel-body{
+    background-color: #B0E57C;
+}
+
+.recipe-body{
+    background-color: #F08080;
+}
+
+
 header a, nav a {
     text-decoration: none;
 }
@@ -124,7 +133,7 @@ header a:hover, nav a:focus {
 }
 
 .grid-pet div{
-    border: 5px solid #333;
+    border: 2px solid #333;
     border-radius: 10px;
     padding: 20px;
     background-color: azure;
@@ -147,10 +156,10 @@ header a:hover, nav a:focus {
 }
 
 .grid-travel div{
-    border: 5px solid black;
+    border: 2px solid black;
     border-radius: 10px;
     padding: 20px;
-    background-color: azure;
+    background-color: #F5FFFA;
 }
 
 /* .grid-travel div h2{
@@ -170,10 +179,10 @@ header a:hover, nav a:focus {
 }
 
 .grid-recipe div{
-    border: 5px solid #333;
+    border: 2px solid #333;
     border-radius: 10px;
     padding: 20px;
-    background-color: azure;
+    background-color: #faeae8;
 }
 
 /* .grid-recipe div h2{
