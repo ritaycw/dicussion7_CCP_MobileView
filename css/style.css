@@ -1,6 +1,10 @@
+html{
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: #ADD8E6;
-    font-size: 15px;
+    font-size: medium;
     line-height: 1.5;
     margin: 10px;
     padding: 10px;
@@ -13,20 +17,50 @@ header a, nav a {
 
 nav ul{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
 
 }
 
 nav ul li{
     padding: 5px;
-    font-size: 20px;
-    background-color: antiquewhite;
+    /* font-size: large; */
+    /* background-color: antiquewhite; */
     /* border: 5px solid #DEB887; */
-    border-radius: 10px;
+    /* border-radius: 5px; */
 }
 
+nav ul li a{
+    text-decoration: none;
+    background-color: antiquewhite;
+    color: #2F4F4F;
+    font-size: 20px;
+    letter-spacing: 1px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+nav ul li a.current{
+    padding: 5px;
+    text-decoration: underline;
+    background-color: antiquewhite;
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: 0 5px 5px 0;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+    background-color: #E0C9B5;
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: 0 5px 5px 0
+}
+
+/* title */
 h1{
     font-size: 50px;
+    color: #333333;
+    letter-spacing: 1px;
     font-weight: bolder;
     text-align: center;
 }
@@ -38,12 +72,13 @@ h2{
     /* background-color: #B0C4DE; */
 }
 
+
 h3 {
     font-size: 20px;
 }
 
-h1, h2, h3, p, P, h2 span {
-    margin: 10px 0 10px 0;
+h1, h2, h3, p, h2 span {
+    margin: 15px 0 15px 0;
 }
 
 figure img, figure, figcaption{
@@ -58,8 +93,8 @@ figure img, figure, figcaption{
     position: absolute;
     top: -40px;
     left: 0;
-    background-color: darkblue;
-    color: white;
+    background-color: #333;
+    color: #fff;
     padding: 5px;
     text-decoration: none;
     z-index: 1000;
@@ -76,15 +111,30 @@ header a:hover, nav a:focus {
     background-color: lightblue;
 }
 
-.grid{
+.grid-pet{
     width: 90%;
     margin: auto;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    padding: 15px;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 1fr 1fr;
     gap: 10px;
     align-content: center;
     justify-content: space-around;
 }
+
+.grid-pet div{
+    border: 5px solid #333;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: azure;
+}
+
+/* .grid-pet div h2{
+    grid-row: 1;
+    grid-column: 1/-1;
+    text-align: center;
+} */
 
 .grid-travel{
     width: 90%;
@@ -96,17 +146,99 @@ header a:hover, nav a:focus {
     justify-content: space-around;
 }
 
-.grid div, .grid-travel div{
+.grid-travel div{
     border: 5px solid black;
     border-radius: 10px;
     padding: 20px;
     background-color: azure;
 }
 
-.grid img, .grid-travel img{
-    width: 70%;
+/* .grid-travel div h2{
+    grid-row: 1;
+    grid-column: 1/-1;
+    text-align: center;
+} */
+
+.grid-recipe{
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    align-content: center;
+    justify-content: space-around;
+}
+
+.grid-recipe div{
+    border: 5px solid #333;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: azure;
+}
+
+/* .grid-recipe div h2{
+    grid-row: 1;
+    grid-column: 1/-1;
+    text-align: center;
+} */
+
+/* .grid-pet img, .grid-pet video, .grid-travel img .grid-recipe img{
+    width: 50%;
     display: block;
-    margin: 0 auto;
+    margin: 5px auto;
+    box-shadow: 5px 5px 3px gray;
+} */
+
+img, video{
+    /* grid-row: 2;
+    grid-column: 1; */
+    width: 50%;
+    display: block;
+    margin: 10px auto;
+    box-shadow: 5px 5px 3px gray;
+}
+
+.pet-photo-grid{
+    width: 90%;
+    margin: auto;
+    display: grid;
+    padding: 15px;
+    /* grid-template-rows: 1fr 1fr; */
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    align-content: center;
+    align-items: start;
+}
+
+/* .pet-photo-grid > img, .pet-photo-grid video{
+    grid-row: 1;
+    grid-column: 1/span1;
+} */
+
+figure{
+    width: 90%;
+    margin: auto;
+    display: grid;
+    padding: 15px;
+    /* grid-template-rows: 1fr 1fr; */
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    align-content: center;
+    align-items: start;
+}
+
+figure img, figure video{
+    /* grid-row: 1; */
+    grid-column: span 1;
+    width: 90%;
+}
+
+figure figcaption{
+    /* grid-row: 1; */
+    grid-column: 2/-1;
+    width: 90%;
+    /* display: block; */
+    margin: 10px auto;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -115,10 +247,6 @@ header a:hover, nav a:focus {
     }
 }
 
-.current{
-    border-right: 2px solid #333;
-    border-bottom: 2px solid #333;
-    background-color: #F5DEB3;
-}
+
 
 
